@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModuleModule } from './shared-module/shared-module-module';
 import { ProdutosModuleModule } from './produtos-module/produtos-module-module';
+import { FuncionariosModule } from './funcionarios/funcionarios-module';
 
 const routes: Routes = [
 
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'lista',
     loadChildren: () =>import('./produtos-module/produtos-module-module').then (m =>ProdutosModuleModule)
+  },
+  {
+    path: 'funcionarios',
+    loadChildren: () =>import('./funcionarios/funcionarios-module').then (m =>FuncionariosModule)
   }
 ];
 
