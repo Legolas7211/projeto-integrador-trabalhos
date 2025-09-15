@@ -9,15 +9,21 @@ import {MatButtonModule} from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { MenuComponent } from './menu/menu.component';
+import { MatTreeModule } from '@angular/material/tree';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
+    MatTreeModule,
+    MatIconModule,
+    MatButtonModule,
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
